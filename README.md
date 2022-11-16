@@ -1,7 +1,7 @@
 # Simple-Faq-Tailwindcss
 
 
-## [![Link](https://img.shields.io/badge/<SITE>-<LINK>-<blue>)]()
+## [![Link](https://img.shields.io/badge/<SITE>-<LINK>-<blue>)](https://vaaakoo.github.io/Simple-Faq-Tailwindcss/faq.html)
 
 
 ## 💻 This is simple Faq with `acordion` and `modal` & `filter` and `word-counter`
