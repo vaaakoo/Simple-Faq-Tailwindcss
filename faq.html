@@ -9,7 +9,7 @@
 
 <body>
     <div class="min-h-screen w-full bg-[#c8dfba]" id="main-content">
-        <!-- main div -->
+        <!-- nav div -->
         <nav class="bg-[#6fbf8a] text-2xl py-4 px-8 shadow-md">
             <div class="mx-auto hidden justify-between lg:flex lg:max-w-[1002px]">
 
@@ -30,7 +30,7 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="dark-mode">
                     <button
                         class="text-md hidden rounded-full bg-[#0a4859] py-3 px-4 text-center hover:opacity-75 font-medium text-white lg:block">Login</button>
                 </div>
@@ -532,7 +532,7 @@
                     <!-- add questions + -->
                     <!-- Modal toggle -->
                     <div
-                        class="bg-[#6fbf8a] flex h-[40px] w-full justify-center rounded-full py-[8px] px-[20px] md:w-[178px] md:justify-start">
+                        class="bg-[#6fbf8a] hover:bg-opacity-80 flex h-[40px] w-full justify-center rounded-full py-[8px] px-[20px] md:w-[178px] md:justify-start">
                         <button class="inline-flex flex-none" onclick="toggleModal()">
                             <p class="self-center text-[14px] font-medium leading-6">add question</p>
 
@@ -613,13 +613,13 @@
                         <!-- Modal footer -->
                         <div class="flex flex-row justify-end gap-2 rounded-b border-t px-5 py-4">
                             <button type="button"
-                                class="text-blackText bg-white px-6 py-2 text-sm font-medium leading-5 focus:outline-none"
+                                class="text-blackText bg-white hover:bg-gray-100 rounded-full px-6 py-2 text-sm font-medium leading-5 focus:outline-none"
                                 onclick="
                             toggleModal()">
-                                <i class="fas fa-times"></i>cancel
+                                cancel
                             </button>
                             <button type="button"
-                                class="rounded-[32px] bg-greenButton px-4 py-2 text-center text-sm font-medium leading-5 text-white focus:outline-none"
+                                class="rounded-[32px] bg-greenButton hover:bg-opacity-80 px-4 py-2 text-center text-sm font-medium leading-5 text-white focus:outline-none"
                                 onclick="toggleModalSubmit()"><i class="fas fa-times"></i> Send questions </button>
                         </div>
                     </div>
@@ -689,89 +689,19 @@
     </div>
 
     <!-- searching with word -->
-    <script>
-
-        document.querySelector('#search-input').
-            addEventListener('input', filterList)
-
-        function filterList() {
-            const searchInput = document.querySelector('#search-input');
-            const filter = searchInput.value.toLowerCase();
-            const listItem = document.querySelectorAll('.acordion-class');
-            const parentAcordion = document.querySelector('.parentAcordion');
-
-
-            listItem.forEach((item) => {
-                let text = item.textContent
-                let grandParent = item.parentElement.parentElement;
-                if (text.toLocaleLowerCase().includes(filter.toLocaleLowerCase())) {
-                    item.style.display = '';
-                    grandParent.style.border = '';
-                    parentAcordion.style.gap = '';
-                }
-                else {
-                    item.style.display = 'none';
-                    parentAcordion.style.gap = '1px';
-                    grandParent.style.border = 'none';
-                }
-            });
-        }
+    <script src="./src/js/search.js">
     </script>
 
     <!-- acordion  -->
-    <script>
-        const acc = document.getElementsByClassName("accordion");
-        let i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                let active = this.classList.toggle("active");
-                let button = this.children[0];
-                let panel = this.nextElementSibling;
-                let svg = this.children[0].childNodes[3];
-
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                    svg.classList.remove("rotate-180");
-                    // button.style.borderBottomStyle = "solid";
-
-                } else {
-                    panel.style.display = "block";
-                    svg.classList.add("rotate-180");
-                    // button.style.borderBottomStyle = "none";
-                }
-            });
-        }
+    <script src="./src/js/accordion.js">
     </script>
 
     <!-- modal toggle -->
-    <script>
-        let modal1 = document.getElementById('modal');
-        let modalSubmit = document.getElementById('modalSubmit');
-        function toggleModal() {
-            modal1.classList.toggle('hidden')
-        }
-        function toggleModalSubmit() {
-            modalSubmit.classList.toggle('hidden');
-            if (modal1.style.display != "none") {
-                modal1.style.display = "none";
-            } else {
-                modal1.style.display = "";
-            }
-
-        }
+    <script src="./src/js/modal.js">
     </script>
 
     <!-- character counter -->
-    <script>
-        function countChars(obj) {
-            let maxLength = 300;
-            var strLength = obj.value.length;
-
-            if (strLength < maxLength) {
-                document.getElementById("charNum").innerHTML = strLength + '/300';
-            }
-        }
+    <script src="./src/js/char.js">
     </script>
 </body>
 
