@@ -21,8 +21,9 @@
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Gif](#gif)
+  - [Accordion](#accordion)
+  - [WordCounter](#wordcounter)
 
 ## Overview
 
@@ -36,14 +37,16 @@ Users should be able to:
   - This `acordion` I can copy another one but I try wis myself;
   - Same I can say for all my Js components;
 
-### Screenshot
-
-![Desktop](./src/images/acordion.png)
-![Mobile](./src/images/counter.png)
-
 ### Gif
 
 ![gif](./src/images/faq.gif)
+
+### Accordion
+![Desktop](./src/images/acordion.png)
+
+### WordCounter
+![Mobile](./src/images/counter.png)
+
 
 ## Or Quick Start
 
