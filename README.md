@@ -42,11 +42,12 @@ Users should be able to:
 ![gif](./src/images/faq.gif)
 
 ### Accordion
+
 ![Desktop](./src/images/acordion.png)
 
 ### WordCounter
-![Mobile](./src/images/counter.png)
 
+![Mobile](./src/images/counter.gif)
 
 ## Or Quick Start
 
